@@ -31,6 +31,7 @@ public final class Main extends JavaPlugin {
         }
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
+
             @Override
             public void run() {
                 for(Player p : Bukkit.getOnlinePlayers()) {
