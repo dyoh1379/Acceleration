@@ -2,3 +2,5 @@ name: Acceleration
 version: '${project.version}'
 main: kr.dyoh1379.acceleration.Main
 api-version: 1.19
+commands:
+  Game:
