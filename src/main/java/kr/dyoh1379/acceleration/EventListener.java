@@ -21,7 +21,6 @@ public class EventListener implements Listener {
         if(config.getBoolean("Game")) {
             Score score = p.getScoreboard().getObjective("Acceleration").getScore(p.getName());
             score.setScore(score.getScore() + 1);
-
         }
     }
 }
