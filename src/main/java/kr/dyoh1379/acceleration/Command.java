@@ -1,6 +1,7 @@
 package kr.dyoh1379.acceleration;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
@@ -28,7 +29,13 @@ public class Command implements CommandExecutor, TabCompleter {
             if (args.length == 1) {
                 if(sender.isOp()) {
 
-                    //TODO: 'help' 인수를 추가하여 명령어 목록을 표기하는 구문이 필요.
+                    if("help".equalsIgnoreCase(args[0])) {
+                        sender.sendMessage(ChatColor.BOLD + "/Game start " + ChatColor.RESET + "게임을 시작합니다");
+                        sender.sendMessage(ChatColor.BOLD + "/Game stop " + ChatColor.RESET + "게임을 종료합니다");
+                        sender.sendMessage(ChatColor.BOLD + "/Game reset " + ChatColor.RESET + "게임 정보를 초기화합니다");
+                        sender.sendMessage("");
+                        sender.sendMessage(ChatColor.BOLD + "Made by. " + ChatColor.RESET + "괴다");
+                    }
 
                     if("start".equalsIgnoreCase(args[0])) {
                         sender.sendMessage("게임 시작!");
