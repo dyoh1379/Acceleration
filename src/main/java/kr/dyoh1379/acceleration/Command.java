@@ -35,6 +35,7 @@ public class Command implements CommandExecutor, TabCompleter {
                         sender.sendMessage(ChatColor.BOLD + "/Game reset " + ChatColor.RESET + "게임 정보를 초기화합니다");
                         sender.sendMessage("");
                         sender.sendMessage(ChatColor.BOLD + "Made by. " + ChatColor.RESET + "괴다");
+
                     }
 
                     if("start".equalsIgnoreCase(args[0])) {
