@@ -123,7 +123,7 @@ public class Command implements CommandExecutor, TabCompleter {
     @Override
     public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, org.bukkit.command.@NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
-        List<String> list = Arrays.asList("start", "stop", "reset", "keepinfo");
+        List<String> list = Arrays.asList("help", "start", "stop", "reset", "keepinfo");
         List<String> list2 = Arrays.asList("true", "false");
         String input = args[0].toLowerCase();
 
