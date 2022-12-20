@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scoreboard.Score;
 
@@ -21,6 +22,16 @@ public class EventListener implements Listener {
         if(config.getBoolean("Game")) {
             Score score = p.getScoreboard().getObjective("Acceleration").getScore(p.getName());
             score.setScore(score.getScore() + 1);
+        }
+    }
+
+    @EventHandler
+    public void death(PlayerDeathEvent e) {
+        Player p = e.getPlayer();
+
+        if(!config.getBoolean("KeepInfo")) {
+            Score score = p.getScoreboard().getObjective("Acceleration").getScore(p.getName());
+            score.resetScore();
         }
     }
 }
