@@ -17,6 +17,7 @@ public final class Main extends JavaPlugin {
 
         FileConfiguration config = this.getConfig();
         config.addDefault("Game", false);
+        config.addDefault("KeepInfo", true);
         config.options().copyDefaults(true);
         saveConfig();
 
@@ -40,7 +41,7 @@ public final class Main extends JavaPlugin {
                         p.sendActionBar("당신의 속도: " + ChatColor.AQUA + score.getScore());
 
                         if(score.getScore() != 0) {
-                            p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2, score.getScore() - 1));
+                            p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 2, score.getScore() - 1, true, false, true));
                         }
                     }
                 }
